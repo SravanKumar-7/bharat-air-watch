@@ -82,12 +82,13 @@ const Dashboard: React.FC = () => {
                     innerRadius={40}
                     outerRadius={70}
                     dataKey="value"
-                    label={({ name, value }) => `${name} ${value}%`}
+                    label
                   >
                     {pollutantData.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
+                  <Tooltip />
                 </PieChart>
               </ResponsiveContainer>
             </Card>
